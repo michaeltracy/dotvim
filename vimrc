@@ -6,7 +6,9 @@ set number
 set shiftwidth=4
 set tabstop=4
 
-set colorcolumn=80
+if version >= 703
+	set colorcolumn=80
+endif
 set tags+=~/.tags
 set omnifunc=syntaxcomplete#Complete
 set completeopt+=longest
