@@ -17,3 +17,9 @@ set background=dark
 
 " gradle syntax highlighting
 au BufNewFile,BufRead *.gradle set filetype=groovy
+
+" toggle Tagbar
+nmap <Leader>b :TagbarToggle<CR>
+
+" toggle NERDTree
+nmap <Leader>t :NERDTreeToggle<CR>
