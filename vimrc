@@ -6,6 +6,7 @@ set number
 set mouse=a
 set shiftwidth=4
 set tabstop=4
+set hidden
 
 if version >= 703
 	set colorcolumn=80
