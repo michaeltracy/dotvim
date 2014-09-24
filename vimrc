@@ -14,3 +14,6 @@ set tags+=~/.tags
 set omnifunc=syntaxcomplete#Complete
 set completeopt+=longest
 set background=dark
+
+" gradle syntax highlighting
+au BufNewFile,BufRead *.gradle set filetype=groovy
