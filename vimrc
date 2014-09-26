@@ -11,7 +11,9 @@ set hidden
 if version >= 703
 	set colorcolumn=80
 endif
+" Where to throw global tags (like the jdk sources)
 set tags+=~/.tags
+
 set omnifunc=syntaxcomplete#Complete
 set completeopt+=longest
 set background=dark
@@ -27,3 +29,7 @@ nmap <Leader>t :NERDTreeToggle<CR>
 
 " Show statusline (for powerline)
 set laststatus=2
+
+if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
+  set t_Co=256
+endif
