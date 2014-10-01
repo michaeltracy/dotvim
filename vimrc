@@ -12,8 +12,6 @@ set background=dark
 if version >= 703
 	set colorcolumn=80
 endif
-" Where to throw global tags (like the jdk sources)
-set tags+=~/.tags
 
 " Turn on omnicomplete, complete with C-Space bringing up complete menu
 set omnifunc=syntaxcomplete#Complete
