@@ -3,3 +3,4 @@
 " 
 " htmltidy isn't working out as well as I expected
 let g:syntastic_html_checkers = []
+set expandtab
