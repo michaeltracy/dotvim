@@ -28,9 +28,6 @@
 [submodule "bundle/closetag"]
 	path = bundle/closetag
 	url = https://github.com/docunext/closetag.vim.git
-[submodule "bundle/powerline-vim"]
-	path = bundle/powerline-vim
-	url = https://github.com/Lokaltog/vim-powerline.git
 [submodule "bundle/vim-colors-solarized"]
 	path = bundle/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
