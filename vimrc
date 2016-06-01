@@ -13,6 +13,8 @@ if version >= 703
 	set colorcolumn=80
 endif
 
+colorscheme slate
+
 " Turn on omnicomplete, complete with C-Space bringing up complete menu
 "set omnifunc=syntaxcomplete#Complete
 "set completeopt+=longest
