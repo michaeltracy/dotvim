@@ -14,9 +14,9 @@ if version >= 703
 endif
 
 " Turn on omnicomplete, complete with C-Space bringing up complete menu
-set omnifunc=syntaxcomplete#Complete
-set completeopt+=longest
-inoremap <C-@> <C-x><C-o>
+"set omnifunc=syntaxcomplete#Complete
+"set completeopt+=longest
+"inoremap <C-@> <C-x><C-o>
 
 " gradle syntax highlighting
 au BufNewFile,BufRead *.gradle set filetype=groovy
