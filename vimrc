@@ -29,6 +29,9 @@ nmap <Leader>b :TagbarToggle<CR>
 " toggle NERDTree
 nmap <Leader>t :NERDTreeToggle<CR>
 
+" toggle Git stuff
+nmap <Leader>g :Gstatus<CR>
+
 " Show statusline (for powerline)
 set laststatus=2
 
