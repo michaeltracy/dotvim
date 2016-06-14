@@ -41,3 +41,7 @@ endif
 
 " Powerline fonts for airline
 let g:airline_powerline_fonts = 1
+
+" Allow project-specific vimrc
+set exrc
+set secure
