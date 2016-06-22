@@ -46,9 +46,6 @@
 [submodule "bundle/vim-es6"]
 	path = bundle/vim-es6
 	url = https://github.com/isRuslan/vim-es6.git
-[submodule "bundle/vim-autoclose"]
-	path = bundle/vim-autoclose
-	url = git://github.com/Townk/vim-autoclose
 [submodule "bundle/ag.vim"]
 	path = bundle/ag.vim
 	url = https://github.com/rking/ag.vim.git
