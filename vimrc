@@ -54,3 +54,8 @@ cnoreabbrev aG Ack
 cnoreabbrev Ag Ack
 cnoreabbrev AG Ack
 nmap <c-f> :Ag<space>
+
+" Setup CtrlP, bind it to c-p, and work out of .git root dir
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
