@@ -45,3 +45,12 @@ let g:airline_powerline_fonts = 1
 " Allow project-specific vimrc
 set exrc
 set secure
+
+" Use ack.vim for ag. See
+" https://github.com/rking/ag.vim/issues/124#issuecomment-227038003
+let g:ackprg = 'ag --vimgrep --smart-case'
+cnoreabbrev ag Ack
+cnoreabbrev aG Ack
+cnoreabbrev Ag Ack
+cnoreabbrev AG Ack
+nmap <c-f> :Ag<space>
