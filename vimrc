@@ -2,6 +2,7 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
+" My own common settings
 set number
 set mouse=a
 set shiftwidth=4
@@ -20,6 +21,10 @@ colorscheme slate
 "set completeopt+=longest
 "inoremap <C-@> <C-x><C-o>
 
+" Tell closetag to only open on xml/html
+autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
+autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag/plugin/closetag.vim
+
 " gradle syntax highlighting
 au BufNewFile,BufRead *.gradle set filetype=groovy
 
@@ -32,6 +37,17 @@ nmap <Leader>t :NERDTreeToggle<CR>
 " toggle Git stuff
 nmap <Leader>g :Gstatus<CR>
 
+" Config taglist
+let Tlist_Ctags_Cmd = "/usr/bin/ctags"
+let Tlist_WinWidth = 50
+map <F4> :TlistToggle<cr>
+
+" Add mapping to call ctags
+map <F8> :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+
+" Use regular omnicomplete for eclim
+let g:EclimCompletionMethod = 'omnifunc'
+
 " Show statusline (for powerline)
 set laststatus=2
 
@@ -41,6 +57,7 @@ endif
 
 " Powerline fonts for airline
 let g:airline_powerline_fonts = 1
+let g:airline_theme='powerlineish'
 
 " Allow project-specific vimrc
 set exrc
