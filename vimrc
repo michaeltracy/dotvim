@@ -4,6 +4,10 @@ filetype plugin indent on
 
 set number
 set mouse=a
+if &term =~ '^screen'
+    " tmux knows the extended mouse mode
+    set ttymouse=xterm2
+endif
 set shiftwidth=4
 set tabstop=4
 set hidden
