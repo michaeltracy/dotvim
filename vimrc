@@ -69,3 +69,10 @@ let g:ctrlp_working_path_mode = 'ra'
 "let g:syntastic_auto_loc_list = 1
 "let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" Show us some whitespace
+"set listchars=eol:↩,tab:⇥\ ,trail:~,extends:↦,precedes:↤,space:·
+set listchars=tab:⇥\ ,trail:~,extends:»,precedes:«
+set list
+"and let lines trail off the page
+set nowrap
