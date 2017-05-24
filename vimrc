@@ -76,3 +76,6 @@ set listchars=tab:⇥\ ,trail:~,extends:»,precedes:«
 set list
 "and let lines trail off the page
 set nowrap
+
+" Run jsx parsing on js files
+let g:jsx_ext_required = 0
