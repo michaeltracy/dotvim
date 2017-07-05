@@ -8,6 +8,9 @@ if &term =~ '^screen'
     " tmux knows the extended mouse mode
     set ttymouse=xterm2
 endif
+" Use osx clipboard
+set clipboard=unnamed
+
 set shiftwidth=4
 set tabstop=4
 set hidden
