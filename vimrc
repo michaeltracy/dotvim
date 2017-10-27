@@ -48,6 +48,19 @@ endif
 
 " Powerline fonts for airline
 let g:airline_powerline_fonts = 1
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
+" With "straight" tabs
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+
+" Map things to flip between tabs
+" borrowed from https://vi.stackexchange.com/q/2129
+map <C-J> :bnext<CR>
+map <C-K> :bprev<CR>
+nnoremap <Leader>l :ls<CR>:b<Space>
 
 " Allow project-specific vimrc
 set exrc
