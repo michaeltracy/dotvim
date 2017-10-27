@@ -35,6 +35,7 @@ nmap <Leader>b :TagbarToggle<CR>
 
 " toggle NERDTree
 nmap <Leader>t :NERDTreeToggle<CR>
+nmap <Leader>r :NERDTreeFind<CR>
 
 " toggle Git stuff
 nmap <Leader>g :Gstatus<CR>
