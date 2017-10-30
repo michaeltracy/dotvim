@@ -130,3 +130,6 @@ endif
 
 " Settings for vim-gitgutter
 set updatetime=250
+
+" Make sure editorconfig doesn't conflict with fugitive
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
