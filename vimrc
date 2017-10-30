@@ -127,3 +127,6 @@ set updatetime=250
 
 " Make sure editorconfig doesn't conflict with fugitive
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+
+" Setup ALE to work with airline
+let g:airline#extensions#ale#enabled = 1
