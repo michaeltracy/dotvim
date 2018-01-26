@@ -56,6 +56,8 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 " With "straight" tabs
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
+" I like the luna theme; good mix of light and dark
+let g:airline_theme="luna"
 
 " Map things to flip between tabs
 " borrowed from https://vi.stackexchange.com/q/2129
