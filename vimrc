@@ -5,6 +5,13 @@ filetype plugin indent on
 " My own common settings
 set number
 set mouse=a
+if &term =~ '^screen'
+    " tmux knows the extended mouse mode
+    set ttymouse=xterm2
+endif
+" Use osx clipboard
+set clipboard=unnamed
+
 set shiftwidth=4
 set tabstop=4
 set hidden
@@ -33,6 +40,7 @@ nmap <Leader>b :TagbarToggle<CR>
 
 " toggle NERDTree
 nmap <Leader>t :NERDTreeToggle<CR>
+nmap <Leader>r :NERDTreeFind<CR>
 
 " toggle Git stuff
 nmap <Leader>g :Gstatus<CR>
@@ -57,7 +65,21 @@ endif
 
 " Powerline fonts for airline
 let g:airline_powerline_fonts = 1
-let g:airline_theme='powerlineish'
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
+" With "straight" tabs
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+" I like the luna theme; good mix of light and dark
+let g:airline_theme="luna"
+
+" Map things to flip between tabs
+" borrowed from https://vi.stackexchange.com/q/2129
+map <C-J> :bnext<CR>
+map <C-K> :bprev<CR>
+nnoremap <Leader>l :ls<CR>:b<Space>
 
 " Allow project-specific vimrc
 set exrc
@@ -77,11 +99,59 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 
-"" Recommended Syntastic defaults
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 1
-"let g:syntastic_check_on_wq = 0
-
 " Set distraction-free mode to \z
 nnoremap <Leader>z :Goyo<CR>
+
+" Show us some whitespace
+"set listchars=eol:↩,tab:⇥\ ,trail:~,extends:↦,precedes:↤,space:·
+set listchars=tab:⇥\ ,trail:~,extends:»,precedes:«
+set list
+"and let lines trail off the page
+set nowrap
+
+" Run jsx parsing on js files
+let g:jsx_ext_required = 0
+
+""" neocomplete settings
+" Disable AutoComplPop.
+let g:acp_enableAtStartup = 0
+" Use neocomplete.
+let g:neocomplete#enable_at_startup = 1
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
+" <CR>: close popup and save indent.
+inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+function! s:my_cr_function()
+  return (pumvisible() ? "\<C-y>" : "" ) . "\<CR>"
+  " For no inserting <CR> key.
+  "return pumvisible() ? "\<C-y>" : "\<CR>"
+endfunction
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" <C-h>, <BS>: close popup and delete backword char.
+inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+" Enable omni completion.
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+" autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+" Enable heavy omni completion.
+if !exists('g:neocomplete#sources#omni#input_patterns')
+  let g:neocomplete#sources#omni#input_patterns = {}
+endif
+
+" Settings for vim-gitgutter
+set updatetime=250
+
+" Make sure editorconfig doesn't conflict with fugitive
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+
+" Setup ALE to work with airline
+let g:airline#extensions#ale#enabled = 1
+
+" Disable gofmt. Not really a good idea to do this, but *someone* on our team
+" thinks they know better
+let g:go_fmt_autosave = 0
