@@ -82,3 +82,6 @@
 [submodule "bundle/bats.vim"]
 	path = bundle/bats.vim
 	url = https://github.com/vim-scripts/bats.vim.git
+[submodule "bundle/salt-vim"]
+	path = bundle/salt-vim
+	url = https://github.com/saltstack/salt-vim.git
