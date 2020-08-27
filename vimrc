@@ -136,7 +136,3 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
 " Setup ALE to work with airline
 let g:airline#extensions#ale#enabled = 1
-
-" Disable gofmt. Not really a good idea to do this, but *someone* on our team
-" thinks they know better
-let g:go_fmt_autosave = 0
