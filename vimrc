@@ -83,6 +83,9 @@ nmap <c-f> :Ag<space>
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
+" Also tell CtrlP to exclude .gitignore files and other things
+" See https://github.com/kien/ctrlp.vim/issues/273
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 " Show us some whitespace
 "set listchars=eol:↩,tab:⇥\ ,trail:~,extends:↦,precedes:↤,space:·
