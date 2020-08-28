@@ -13,3 +13,9 @@ let g:tagbar_type_typescript = {
     \ 'e:enums',
   \ ]
 \ }
+
+" Turn on lint-fixing
+let b:ale_fixers = ['eslint']
+
+" I don't care; format for me
+let g:ale_fix_on_save = 1
