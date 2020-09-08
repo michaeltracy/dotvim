@@ -12,6 +12,7 @@ endif
 " Use osx clipboard
 set clipboard=unnamed
 
+set expandtab
 set shiftwidth=4
 set tabstop=4
 set hidden
@@ -98,6 +99,9 @@ nmap <c-f> :Ag<space>
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
+" Also tell CtrlP to exclude .gitignore files and other things
+" See https://github.com/kien/ctrlp.vim/issues/273
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 " Set distraction-free mode to \z
 nnoremap <Leader>z :Goyo<CR>
@@ -151,7 +155,3 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
 " Setup ALE to work with airline
 let g:airline#extensions#ale#enabled = 1
-
-" Disable gofmt. Not really a good idea to do this, but *someone* on our team
-" thinks they know better
-"let g:go_fmt_autosave = 0
