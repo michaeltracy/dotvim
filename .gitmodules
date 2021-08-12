@@ -94,3 +94,6 @@
 [submodule "bundle/vimproc.vim"]
 	path = bundle/vimproc.vim
 	url = https://github.com/Shougo/vimproc.vim.git
+[submodule "bundle/vim-graphql"]
+	path = bundle/vim-graphql
+	url = https://github.com/jparise/vim-graphql.git
