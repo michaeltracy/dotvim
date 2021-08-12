@@ -15,7 +15,9 @@ let g:tagbar_type_typescript = {
 \ }
 
 " Turn on lint-fixing
-let b:ale_fixers = ['eslint']
+let b:ale_fixers = ['eslint', 'prettier']
+" But not tslint, as this is deprecated
+let b:ale_linters_ignore = ['tslint']
 
 " I don't care; format for me
 let g:ale_fix_on_save = 1
