@@ -97,3 +97,6 @@
 [submodule "bundle/vim-graphql"]
 	path = bundle/vim-graphql
 	url = https://github.com/jparise/vim-graphql.git
+[submodule "bundle/indentline"]
+	path = bundle/indentline
+	url = https://github.com/Yggdroot/indentLine.git
