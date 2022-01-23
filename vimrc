@@ -16,7 +16,7 @@ set expandtab
 set shiftwidth=4
 set tabstop=4
 set hidden
-set background=dark
+set background&
 
 if version >= 703
 	set colorcolumn=80
