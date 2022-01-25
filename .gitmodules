@@ -100,3 +100,6 @@
 [submodule "bundle/indentline"]
 	path = bundle/indentline
 	url = https://github.com/Yggdroot/indentLine.git
+[submodule "bundle/toml"]
+	path = bundle/toml
+	url = https://github.com/cespare/vim-toml.git
